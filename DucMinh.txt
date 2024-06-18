@@ -1,0 +1,14 @@
+@echo off
+:: Lấy đường dẫn đến Desktop của người dùng
+set "desktop=%USERPROFILE%\Desktop"
+
+
+:: Kiểm tra xem thư mục có tồn tại không
+IF NOT EXIST "%desktop%\DucMinh" (
+    :: Tạo thư mục
+    mkdir "%desktop%\DucMinh"
+    echo Thư mục 'DucMinh' đã được tạo thành công trên Desktop.
+) ELSE (
+    echo Thư mục 'DucMinh' đã tồn tại trên Desktop.
+)
+pause
